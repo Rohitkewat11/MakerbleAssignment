@@ -4,15 +4,6 @@ import { useState } from "react";
 
 export function MakerbleBody(){
 
-    const [postStyle,setPostStyle] = useState({display:"block"});
-
-    function handlePostclick(){
-        setPostStyle({display:"none"});
-    }
-    // function handlePostToggle(){
-    //     setPostStyle({display:"block"});
-        
-    // }
     return(
         <>
             <header className="bg-body-tertiary">
@@ -20,7 +11,7 @@ export function MakerbleBody(){
           <div>
             <nav class="navbar navbar-expand-lg">
               <div className="container-fluid">
-                <Link to="post"><img  src="./resource/image/logo.png" alt="" height="40" width="40" /></Link>
+                <Link to="/"><img  src="./resource/image/logo.png" alt="" height="40" width="40" /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
                 </button>
@@ -85,19 +76,15 @@ export function MakerbleBody(){
       <section className="bg-body-tertiary m-auto mt-2">
         {/* feature container */}
         <div className="d-flex justify-content-between p-3 border-bottom" id="feature-container">
-          <div className="" onClick={handlePostclick}><Link to="/post" className="text-decoration-none">Posts</Link></div>
-          <div className="" onClick={handlePostclick}><Link to="/project" className="text-decoration-none">Projects</Link></div>
-          <div className="" onClick={handlePostclick}><Link to="/Albums" className="text-decoration-none">Albums</Link></div>
-          <div className="" onClick={handlePostclick}><Link to="/organisation" className="text-decoration-none">Organisations</Link></div>
-          <div className="" onClick={handlePostclick}><Link to="/boards" className="text-decoration-none">Boards</Link></div>
+          <div><Link to="post" className="text-decoration-none">Posts</Link></div>
+          <div><Link to="project" className="text-decoration-none">Projects</Link></div>
+          <div><Link to="Albums" className="text-decoration-none">Albums</Link></div>
+          <div><Link to="organisation" className="text-decoration-none">Organisations</Link></div>
+          <div><Link to="boards" className="text-decoration-none">Boards</Link></div>
         </div>
         {/*  main section start */}
         <main>
-
-            <div style={postStyle}><MakerblePost></MakerblePost></div>
             <Outlet></Outlet>
-
-
         </main>
         {/* main section end */}
 
