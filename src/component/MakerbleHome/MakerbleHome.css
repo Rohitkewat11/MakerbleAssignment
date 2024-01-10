@@ -46,6 +46,7 @@ section{
     #main{
         display:grid;
         grid-template-columns: 12fr;
+        z-index: -1;
 
     }
     section{
@@ -84,6 +85,8 @@ section{
     #task-follow-block{
         display:block;
         position:absolute;
+        top:5em;
+        z-index: 0;
         background-color:whitesmoke;
     }
     #showbtn{
